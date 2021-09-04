@@ -1,2 +1,2 @@
-# eJournalist-blog-website
+# blog-website-application
 A website application for blogging
