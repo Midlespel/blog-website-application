@@ -1,2 +1,1 @@
-# blog-website-application
-A website application for blogging
+# blogging-website
