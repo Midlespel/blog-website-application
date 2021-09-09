@@ -10,18 +10,16 @@
 :root {
 
     /* CSS Color variables */
-    --c-gray: #152D35;
-    --c-dark-gray: #112031;
-    --c-light-gray: #345B63;
+    --color-gray: #152D35;
+    --color-dark-gray: #112031;
+    --color-light-gray: #345B63;
 
-    --c-sky: #A1C4CF;
-    --c-light-sky: #D4ECDD;
+    --color-sky: #A1C4CF;
+    --color-light-sky: #D4ECDD;
+    --color-sky-gradient: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
 
     /* Font Size variables */
-    --text-title: 2rem;
-    --text-sub-title: 1.2rem;
-    --text-normal: 1rem;
 
 
     /* Font Family variables */
@@ -33,10 +31,10 @@
 
 
     /* Margin and Padding variables */
-    --s-0-5-rem: .5rem;
-    --s-1-rem: 1rem;
-    --s-1-5-rem: 1.5rem;
-    --s-2-rem: 2rem;
+    --rem-0-5: .5rem;
+    --rem-1: 1rem;
+    --rem-1-5: 1.5rem;
+    --rem-2: 2rem;
 
 }
 
@@ -47,7 +45,7 @@ body {
 }
 
 a {
-    color: var(--c-gray);
+    color: var(--color-gray);
     text-decoration: none;
 }
 
@@ -55,49 +53,69 @@ ul {
     list-style-type: none;
 }
 
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 /* Navigation bar rules */
 nav {
     background: white;
-    padding: 0 var(--s-1-rem);
+    padding: 0 var(--rem-2);
+    overflow: hidden;
+    /* transition: height 1s ease-in-out; */
 }
 
 .nav-menu {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container {
-    display: flex; /**/
-}
-
-.nav-menu li a {
+.nav-brand a {
     display: block;
-    padding: var(--s-0-5-rem) 5px;
-}
-
-.nav-brand {
     font-family: var(--Lexend-Deca);
-    font-size: var(--text-title);
+    font-size: 2rem;
+    padding: 0;
 }
 
-.nav-item:not(.social) {
+.toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.toggle-icon i {
+    color: var(--color-gray);
+    font-size: 1.4rem;
+}
+
+.nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav-link {
     font-family: var(--Abel);
-    font-size: var(--text-sub-title);
-    padding: 0 var(--s-1-rem);
+    font-size: 1.1rem;
+    padding: var(--rem-1);
+}
+
+.nav-link:hover {
+    background-color: var(--color-gray);
+}
+
+.nav-link:hover a {
+    color: white;
 }
 
 .social {
-    font-size: var(--text-normal);
+    padding: 0;
 }
 
-.nav-item:not(.social):hover a,
+.social i {
+    padding: .2rem .2rem 0 .2rem;
+}
+
 .social i:hover {
-    color: var(--c-sky);
-    text-decoration: underline;
-}
-
-.toggle-collapse {
-    display: none;
+    color: var(--color-sky);
 }
