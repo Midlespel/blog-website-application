@@ -20,6 +20,7 @@
 
 
     /* Font Size variables */
+    --text-medium: 1.1rem;
 
 
     /* Font Family variables */
@@ -35,6 +36,10 @@
     --rem-1: 1rem;
     --rem-1-5: 1.5rem;
     --rem-2: 2rem;
+    --rem-2-5: 2.5rem;
+    --rem-3: 3rem;
+    --rem-3-5: 3.5rem;
+
 
 }
 
@@ -53,6 +58,28 @@ ul {
     list-style-type: none;
 }
 
+h1 {
+    font-family: var(--Lexend-Deca);
+    font-size: var(--rem-3);
+}
+
+h2 {
+    font-family: var(--Lexend-Deca);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: var(--rem-2);
+}
+
+button {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: var(--rem-0-5) var(--rem-3-5);
+    font-family: var(--Livvic);
+    font-size: var(--text-medium);
+}
+
 .flex-row {
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +91,6 @@ nav {
     background: white;
     padding: 0 var(--rem-2);
     overflow: hidden;
-    /* transition: height 1s ease-in-out; */
 }
 
 .nav-menu {
@@ -75,7 +101,7 @@ nav {
 .nav-brand a {
     display: block;
     font-family: var(--Lexend-Deca);
-    font-size: 2rem;
+    font-size: var(--rem-2);
     padding: 0;
 }
 
@@ -96,7 +122,7 @@ nav {
 
 .nav-link {
     font-family: var(--Abel);
-    font-size: 1.1rem;
+    font-size: var(--text-medium);
     padding: var(--rem-1);
 }
 
@@ -119,6 +145,39 @@ nav {
 
 .social i:hover {
     color: var(--color-sky);
+}
+
+
+/* Main section rules */
+.site-background {
+    background: url(../../assets/img/background-image.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.site-title {
+    color: white;
+    text-align: center;
+}
+
+.site-title h1, h3 {
+    margin: .3rem;
+}
+
+.site-title button {
+    background: var(--color-sky-gradient);
+    border: solid 1px white;
+    margin: 1.8rem;
+    color: var(--color-gray);
+}
+
+.site-title button:hover {
+    background: transparent;
+    border: solid 1px white;
+    color: white;
 }
 
 
@@ -164,4 +223,11 @@ nav {
     .social i:active {
         color: var(--color-sky);
     }
+
+    .site-title button:hover,
+    .site-title button:active {
+        background: transparent;
+        border: solid 1px white;
+        color: white;
+    }    
 }
