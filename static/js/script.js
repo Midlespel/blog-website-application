@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.toggle-collapse').click(function () {
-        $('.nav-bar').toggleClass('collapse');
+    $(".toggle").click(function () {
+        $(".nav-menubar, .social").slideToggle("slow");
     });
 });
