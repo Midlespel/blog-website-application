@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -40,7 +40,6 @@
     --rem-3: 3rem;
     --rem-3-5: 3.5rem;
 
-
 }
 
 
@@ -72,12 +71,26 @@ h3 {
     font-size: var(--rem-2);
 }
 
+h4 {
+    font-family: var(--Abel);
+    font-size: var(--rem-1-5);
+}
+
 button {
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     padding: var(--rem-0-5) var(--rem-3-5);
     font-family: var(--Livvic);
     font-size: var(--text-medium);
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 0 5vw;
 }
 
 .flex-row {
@@ -155,7 +168,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 110vh;
 }
 
 .site-title {
@@ -178,6 +191,58 @@ nav {
     background: transparent;
     border: solid 1px white;
     color: white;
+}
+
+
+/* Carousel section rules */
+/* Temporary query for dump images */
+img {
+    background-color: var(--color-gray);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 220px;
+    width: 360px;
+}
+
+.blog {
+    height: 100vh;
+    width: 100%;
+}
+
+.blog-post {
+    padding-top: var(--rem-3-5);
+}
+
+.blog-content {
+    border-radius: 3px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    margin: var(--rem-3) var(--rem-2);
+    text-align: center;
+    width: 80%;
+}
+
+.blog-title {
+    padding: var(--rem-2) 0;
+}
+
+.btn-blog {
+    background: var(--color-gray);
+    border: solid 1px black;
+    color: white;
+    padding: var(--rem-0-5) var(--rem-2-5);
+    margin: var(--rem-0-5);
+}
+
+.btn-blog:active {
+    background: transparent;
+    border: solid 1px black;
+    color: var(--color-gray);
+}
+
+.blog-content span {
+    display: block;
 }
 
 
