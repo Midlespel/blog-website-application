@@ -86,7 +86,7 @@ nav {
 
 .toggle-icon i {
     color: var(--color-gray);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 .nav-items {
@@ -112,10 +112,56 @@ nav {
     padding: 0;
 }
 
+.toggle-icon, i,
 .social i {
     padding: .2rem .2rem 0 .2rem;
 }
 
 .social i:hover {
     color: var(--color-sky);
+}
+
+
+/* Viewport less than or equal to 700px */
+@media only screen and (max-width: 700px){
+    .nav-brand a,
+    .social {
+        padding: var(--rem-1) 0;
+    }
+
+    .toggle {
+        display: initial;
+    }
+
+    .nav-menubar {
+        width: 100%;
+    }
+
+    .nav-menubar,
+    .social {
+        display: none;
+    }
+
+    .nav-items {
+        display: block;
+    }
+
+    .nav-link a {
+        display: block;
+    }
+
+    .nav-link:hover,
+    .nav-link:active {
+        background-color: var(--color-gray);
+    }
+    
+    .nav-link:hover a,
+    .nav-link:active a {
+        color: white;
+    }
+
+    .social i:hover,
+    .social i:active {
+        color: var(--color-sky);
+    }
 }
